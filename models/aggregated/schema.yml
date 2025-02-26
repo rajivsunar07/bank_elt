@@ -1,0 +1,5 @@
+version: 2
+
+models:
+  - name: agg_customer
+    description: "{{doc('agg_payment_method_doc')}}"

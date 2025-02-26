@@ -1,0 +1,5 @@
+id,payment_method,payment_method_description
+1,Cheques,Transactions done using Cheques
+2,Mob_Bank,Transactions done using Mobile Banking
+3,Cards,Transactions done using Cards
+4,Net_Banking,Transactions done using Net Banking

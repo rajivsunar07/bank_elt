@@ -1,0 +1,32 @@
+version: 2
+
+sources:
+  - name: transaction_data
+    description: "Has transaction data"
+    database: defaultdb
+    schema: public
+    tables:
+      - name: transaction_table
+        description: "Has transaction data"
+        columns:
+          - name: account_id
+          - name: transaction_id
+          - name: transaction_type
+          - name: amount
+          - name: transaction_date
+          - name: payment_method
+        
+models:
+  - name: rw_transaction
+    description: "Cleaned transaction data"
+    columns:
+      - name: transaction_id
+        description: "Unique transaction identifier"
+        tests:
+          - unique
+          - not_null
+      - name: transaction_date
+        description: "Date of transaction"
+        tests:
+          - does_not_have_date_greater_than_today
+        
